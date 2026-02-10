@@ -1,4 +1,4 @@
-﻿//////////////////////////////////////////////////// 1. Entrada, Processamento e Saída ////////////////////////////////////////////////////
+//////////////////////////////////////////////////// 1. Entrada, Processamento e Saída ////////////////////////////////////////////////////
 
 
 // // Peça ao usuário dois números e mostre a soma, subtração, multiplicação e divisão entre eles.
@@ -272,7 +272,7 @@
 //     double n1 = double.Parse(Console.ReadLine()!);
 //     Console.WriteLine("Digite outro número");
 //     double n2 = double.Parse(Console.ReadLine()!);
-    
+
 //     Console.WriteLine($"Resultado: {n1 * n2}");
 // }
 // else if (opcao == "4")
@@ -335,123 +335,289 @@
 // // Leia um código de produto e informe a categoria (ex: 1–Alimento, 2–Bebida, 3–Limpeza).
 
 
+// Console.WriteLine("Digite o primeiro número do código do produto");
+// int codigo = int.Parse(Console.ReadLine()!);
 
+// Console.Write("Categoria do produto: ");
+// switch (codigo)
+// {
+//     case 1:
+//         Console.WriteLine("Alimento\n");
+//         break;
 
+//     case 2:
+//         Console.WriteLine("Bebida\n");
+//         break;
 
+//     case 3:
+//         Console.WriteLine("Limpeza\n");
+//         break;
 
+//     case 4:
+//         Console.WriteLine("Entreterimento\n");
+//         break;
 
+//     case 5:
+//         Console.WriteLine("Tempero\n");
+//         break;
 
+//     case 6:
+//         Console.WriteLine("Recipiente\n");
+//         break;
+
+//     case 7:
+//         Console.WriteLine("Eletrodoméstico\n");
+//         break;
+
+//     case 8:
+//         Console.WriteLine("Congelado\n");
+//         break;
+
+//     case 9:
+//         Console.WriteLine("Casa\n");
+//         break;
+
+//     default:
+//         Console.WriteLine("ERRO\n");
+//         break;
+// }
 
 
 //////////////////////////////////////////////////// 5. Lógica com Acumuladores e Contadores ////////////////////////////////////////////////////
 
 
-// Leia 10 números e informe:
+// // Leia 10 números e informe:
 
-// a soma
-// a média
-// o maior número
+// // a soma
+// // a média
+// // o maior número
 
-double soma = 0;
-double maior = 0;
-double x = 0;
+// double soma = 0;
+// double maior = 0;
+// double x = 0;
 
-Console.WriteLine("Digite 10 números\n");
-for (int i = 0; i < 10; i++)
-{
-    Console.WriteLine($"Digite o {i + 1}° número");
-    x = double.Parse(Console.ReadLine()!);
-    soma += x;
+// Console.WriteLine("Digite 10 números\n");
+// for (int i = 0; i < 10; i++)
+// {
+//     Console.WriteLine($"Digite o {i + 1}° número");
+//     x = double.Parse(Console.ReadLine()!);
+//     soma += x;
 
-    if(maior < x)
-    {
-        maior = x;
-    }
-}
+//     if(maior < x)
+//     {
+//         maior = x;
+//     }
+// }
 
-Console.WriteLine($"\nA soma dos números digitados é = {soma}");
-Console.WriteLine($"A média dos números digitados é = {soma / 10}");
-Console.WriteLine($"\nO maior número digitado é = {maior}");
-
-
-// Leia idades até que seja digitado um valor negativo e informe a média das idades.
+// Console.WriteLine($"\nA soma dos números digitados é = {soma}");
+// Console.WriteLine($"A média dos números digitados é = {soma / 10}");
+// Console.WriteLine($"\nO maior número digitado é = {maior}");
 
 
-int contador = 0;
-int idade = 0;
-double total = 0;
-
-while(idade < 0)
-{
-    Console.WriteLine("Digite uma idade");
-    idade = int.Parse(Console.ReadLine()!);
-
-    total += idade;
-    contador++;
-}
-
-Console.WriteLine($"A média das idades digitadas é = {total / contador}");
+// // Leia idades até que seja digitado um valor negativo e informe a média das idades.
 
 
-// Leia vários números e informe quantos são pares e quantos são ímpares.
+// int contador = 0;
+// int idade = 0;
+// double total = 0;
+
+// while(idade < 0)
+// {
+//     Console.WriteLine("Digite uma idade");
+//     idade = int.Parse(Console.ReadLine()!);
+
+//     total += idade;
+//     contador++;
+// }
+
+// Console.WriteLine($"A média das idades digitadas é = {total / contador}");
 
 
-double y = 1;
-int positivo = 0;
-int negativo = 0;
+// // Leia vários números e informe quantos são pares e quantos são ímpares.
 
-while(y != 0)
-{
-    Console.WriteLine("\nDigite um número, para parar digite 0");
-    y = int.Parse(Console.ReadLine()!);
-    if(y > 0)
-    {
-        positivo++;
-    }
-    else if(y < 0)
-    {
-        negativo++;
-    }
-}
 
-Console.WriteLine($"\nQuantidade de números positivos digitados = {positivo}");
-Console.WriteLine($"Quantidade de números negativos digitados = {negativo}\n");
+// double y = 1;
+// int positivo = 0;
+// int negativo = 0;
+
+// while(y != 0)
+// {
+//     Console.WriteLine("\nDigite um número, para parar digite 0");
+//     y = int.Parse(Console.ReadLine()!);
+//     if(y > 0)
+//     {
+//         positivo++;
+//     }
+//     else if(y < 0)
+//     {
+//         negativo++;
+//     }
+// }
+
+// Console.WriteLine($"\nQuantidade de números positivos digitados = {positivo}");
+// Console.WriteLine($"Quantidade de números negativos digitados = {negativo}\n");
 
 
 //////////////////////////////////////////////////// 6. Desafios de Lógica ////////////////////////////////////////////////////
 
 
-// Leia um número e informe se ele é primo.
+// // Leia um número e informe se ele é primo.
 
 
-Console.WriteLine("Digite um número");
+// Console.WriteLine("Digite um número inteiro");
+// int primo = int.Parse(Console.ReadLine()!);
+// bool confirmacao = true;
 
+// for (int i = 2; i < primo; i++)
+// {
+//     if (primo % i == 0)
+//     {
+//         confirmacao = false;
+//     }
+// }
 
+// switch (confirmacao)
+// {
+//     case false:
+//         Console.WriteLine("Seu número não é primo");
+//         break;
 
-
-// Leia um número e calcule o fatorial.
-
-
-
-
-
-// Leia uma senha e permita no máximo 3 tentativas.
-
-
-
-
-
-// Simule um caixa eletrônico que permite saques enquanto houver saldo.
-
-
-
-
-
-
-
-
-
-// Leia uma sequência de números e informe qual foi o maior valor digitado.
+//     default:
+//         Console.WriteLine("Seu número é primo");
+//         break;
+// }
 
 
 
+// // Leia um número e calcule o fatorial.
+
+
+// Console.WriteLine("Digite um número inteiro");
+// int fatorial = int.Parse(Console.ReadLine()!);
+
+// if (fatorial <= 1)
+// {
+//     fatorial = 1;
+// }
+// else
+// {
+//     for (int i = fatorial; i > 1; i--)
+//     {
+//         fatorial = fatorial * (i - 1);
+//     }
+// }
+
+// Console.WriteLine($"O fatorial do número digitado é = {fatorial}");
+
+
+// // Leia uma senha e permita no máximo 3 tentativas.
+
+
+// Console.WriteLine("Digite a senha");
+// string senha = Console.ReadLine()!;
+// bool bloqueio = false;
+
+// for (int i = 3; i > 0; i--)
+// {
+//     if (senha != "1234")
+//     {
+//         Console.WriteLine("Acesso negado");
+//         if (i == 1)
+//         {
+//             bloqueio = true;
+//             break;
+//         }
+//     }
+//     else
+//     {
+//         Console.WriteLine("Logado com Sucesso");
+//         break;
+//     }
+//     Console.WriteLine("Digite a senha novamente");
+//     senha = Console.ReadLine()!;
+// }
+// if (bloqueio == true)
+// {
+//     Console.WriteLine("BLOQUEADO");
+// }
+
+
+// // Simule um caixa eletrônico que permite saques enquanto houver saldo.
+
+
+// bool repitir = true;
+// Console.WriteLine("\nDigite seu saldo");
+// double saldo = double.Parse(Console.ReadLine()!);
+
+// while (repitir)
+// {
+//     if( saldo > 10000000000000000000)
+//     {
+//         Console.WriteLine("Um mandato de prisão com seu nome foi enviado ao departamento de polícia mais próximo");
+//         repitir = false;
+//         break;
+//     }
+//     if( saldo > 1000000000)
+//     {
+//         Console.WriteLine("Você irá receber uma multa");
+//         repitir = false;
+//         break;
+//     }
+//     Console.WriteLine($"\nSaldo atual: R$ {saldo}");
+
+//     Console.WriteLine("\n1 - Sacar\t2 - Depositar\n3 - Sair\n");
+//     Console.Write("Digite o número da operação que deseja: ");
+//     string resposta = Console.ReadLine()!;
+
+//     switch (resposta)
+//     {
+//         case "1":
+//             Console.Write("\nDigite o valor que deseja Sacar: R$ ");
+//             double sacar = double.Parse(Console.ReadLine()!);  Thread.Sleep(500);
+//             if(sacar > saldo)
+//             {
+//                 Console.WriteLine("\nNão foi possível sacar o dinheiro desejado");
+//             }
+//             else
+//             {
+//                 saldo -= sacar;  Thread.Sleep(500);
+//                 Console.WriteLine("\nDinheiro sacado com sucesso");
+//             }
+//             break;
+
+//         case "2":
+//             Console.Write("\nDigite o valor que deseja depositar: R$ ");
+//             double deposito = double.Parse(Console.ReadLine()!);
+//             saldo += deposito; Thread.Sleep(1000);
+//             Console.WriteLine("\nDinheiro depositado com sucesso");
+//             break;
+
+//         case "3":
+//             Console.Write("\nTenha um ótimo dia!\n");
+//             repitir = false;
+//             break;
+
+//         default:
+//             Console.Write("\nOperação inválida");
+//             break;
+//     }
+// }
+
+
+// // Leia uma sequência de números e informe qual foi o maior valor digitado.
+
+
+// double numero = 1;
+// double maior = 0;
+// while (numero != 0)
+// {
+//     Console.WriteLine("Digite um número, para parar o programa digite '0'");
+//     numero = double.Parse(Console.ReadLine()!);
+
+//     if (numero > maior)
+//     {
+//         maior = numero;
+//     }
+// }
+
+// Console.WriteLine($"Seu maor número digitado é = {maior}");
