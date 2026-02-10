@@ -215,7 +215,7 @@
 // double resposta = 0;
 // for(int i = 1; i < 6; i++)
 // {
-//     Console.WriteLine($"Digite seu {i + 1}° número");
+//     Console.WriteLine($"Digite seu {i}° número");
 //     resposta = double.Parse(Console.ReadLine()!);
 
 //     if (resposta > 0)
@@ -621,3 +621,4 @@
 // }
 
 // Console.WriteLine($"Seu maor número digitado é = {maior}");
+
